@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_04_123940) do
+ActiveRecord::Schema.define(version: 2021_11_18_132611) do
+
+  create_table "jseekers", force: :cascade do |t|
+    t.string "name"
+    t.string "mobile"
+    t.string "email"
+    t.integer "percentage"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
+  end
 
   create_table "u_sers", force: :cascade do |t|
     t.string "email", null: false
@@ -24,6 +34,10 @@ ActiveRecord::Schema.define(version: 2021_11_04_123940) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "companyname"
+    t.string "cname"
+    t.string "cinumber"
+    t.string "mobileno"
   end
 
 end

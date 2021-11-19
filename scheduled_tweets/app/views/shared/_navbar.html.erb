@@ -16,27 +16,45 @@
         <a class="nav-link disabled">Disabled</a>
 
         <ul class="navbar-nav ms-auto nb-2 mb-lg-0">
+          <% if Current.user %>
+              
+            <li class="nav-item">
+            <%= link_to Current.user.email ,password_path, class: "nav-link"%> 
+            </li>
+            <li class="nav-item">
+            <%= button_to "logout", logout_path, method: :delete, class: "btn btn-outline-secondary" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+            <%= link_to "Sign_Up Employer", sign_up_path, class: "nav-link" %> 
+            </li>
+            <li class="nav-item">
+            <%= link_to "Login Employer", sign_in_path, class: "nav-link" %>
+            </li>
+              
+          <% end %>
+          <% if Current.jseeker %>
 
-        <% if Current.user %>
-          
-          <li class="nav-item">
-          <%= link_to Current.user.email ,password_path, class: "nav-link"%> 
-          </li>
-          <li class="nav-item">
-          <%= button_to "logout", logout_path, method: :delete, class: "btn btn-outline-secondary" %>
-          </li>
-        <% else %>
-          <li class="nav-item">
-          <%= link_to "Sign_Up", sign_up_path, class: "nav-link" %> 
-          </li>
-          <li class="nav-item">
-          <%= link_to "Login", sign_in_path, class: "nav-link" %>
-          </li>
-          
-        <% end %>
+            <li class="nav-item">
+            <%= link_to Current.jseeker.email ,password1_path, class: "nav-link"%> 
+            </li>
+            <li class="nav-item">
+            <%= button_to "logout", logout1_path, method: :delete, class: "btn btn-outline-secondary" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+            <%= link_to "Sign_Up Jobseeker", sign_up1_path, class: "nav-link" %> 
+            </li>
+            <li class="nav-item">
+            <%= link_to "Login Jobseeker", sign_in1_path, class: "nav-link" %>
+            </li>
 
-        </ul>
+          <% end %>
+   
 
+        
+ 
+          </ul>
       </div>
 
     </div>

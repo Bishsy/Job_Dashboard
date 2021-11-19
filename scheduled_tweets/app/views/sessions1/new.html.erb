@@ -1,16 +1,16 @@
-<h1>Sign in Employer </h1>
+<h1>Sign in JobSeeker</h1>
 
 
-<%= form_with url: sign_in_path do |form| %>
+<%= form_with url: sign_in1_path do |form| %>
     <div class="mb-3">
-     <%= form.label :mobileno %>
-    <%=form.text_field :mobileno, class: "form-control", placeholder: "steve@apple.com" %>
+    <%= form.label :mobile %>
+    <%=form.text_field :mobile, class: "form-control", placeholder: "steve@apple.com" %>
     </div>
 
     <div class="mb-3">
     <%= form.label :password %>
     <%=form.password_field :password, class:"form-control",placeholder:"password" %>
-    <%= link_to "Forgot your password?", password_reset_path %>
+    <%= link_to "Forgot your password?", password1_reset1_path %>
     </div>
 
     <div class="mb-3">

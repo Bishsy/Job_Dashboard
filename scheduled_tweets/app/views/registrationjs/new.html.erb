@@ -1,31 +1,32 @@
-<h1>Sign UP For Employer</h1>
+<h1>Sign UP For JobSeeker</h1>
 
-<%=form_with model: @user, url: sign_up_path do |form| %>
-    <% if @user.errors.any? %>
+<%=form_with model: @jseeker, url: sign_up1_path do |form| %>
+    <% if @jseeker.errors.any? %>
         <div class="alert alert-danger">
-        <% @user.errors.full_messages.each do |message| %>
+        <% @jseeker.errors.full_messages.each do |message| %>
         <div><%=message %></div>
         <% end %>
         </div>
     <% end %>
-
+    <div class="mb-3">
+    <%= form.label :Full_Name%>
+    <%=form.text_field :name, class: "form-control"%>
+    </div>
     <div class="mb-3">
     <%= form.label :email %>
     <%=form.text_field :email, class: "form-control", placeholder: "steve@apple.com" %>
-  
-        <div class="mb-3">
-    <%= form.label :CompanyName %>
-    <%=form.text_field :cname, class: "form-control"%>
     </div>
-        <div class="mb-3">
-    <%= form.label :CIN_Number %>
-    <%=form.text_field  :cinumber, class: "form-control"%>
-    </div>
-    </div>
-       <div class="mb-3">
+    <div class="mb-3">
     <%= form.label :Mobile_No %>
-    <%=form.text_field  :mobileno, class: "form-control"%>
+    <%=form.text_field  :mobile, class: "form-control"%>
     </div>
+      
+    <div class="mb-3">
+    <%= form.label :Percentage %>
+    <%=form.text_field  :percentage, class: "form-control"%>
+    </div>
+    
+   
     <div class="mb-3">
     <%= form.label :password %>
     <%=form.password_field :password, class:"form-control",placeholder:"password" %>
