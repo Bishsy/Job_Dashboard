@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_18_132611) do
+ActiveRecord::Schema.define(version: 2021_11_20_162848) do
+
+  create_table "applied_fors", force: :cascade do |t|
+    t.integer "status"
+    t.integer "job_id", null: false
+    t.integer "jseeker_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_id"], name: "index_applied_fors_on_job_id"
+    t.index ["jseeker_id"], name: "index_applied_fors_on_jseeker_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "job_title"
+    t.text "job_des"
+    t.integer "job_percat"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_jobs_on_user_id"
+  end
 
   create_table "jseekers", force: :cascade do |t|
     t.string "name"
@@ -32,4 +52,7 @@ ActiveRecord::Schema.define(version: 2021_11_18_132611) do
     t.string "mobileno"
   end
 
+  add_foreign_key "applied_fors", "jobs"
+  add_foreign_key "applied_fors", "jseekers"
+  add_foreign_key "jobs", "users"
 end
