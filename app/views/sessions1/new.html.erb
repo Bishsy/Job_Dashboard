@@ -1,0 +1,23 @@
+<h1>Sign in JobSeeker</h1>
+
+<div class="mb-3">
+<%= button_to "Sign in as Employer", sign_in_path, :id => "open-contacts-dialog-btn",
+      :class => "btn btn-primary btn-sm", :method => :get %>
+</div>
+
+<%= form_with url: sign_in1_path do |form| %>
+    <div class="mb-3">
+    <%= form.label :"mobile number" %>
+    <%=form.text_field :mobile, class: "form-control", placeholder:"1234567890"%>
+    </div>
+
+    <div class="mb-3">
+    <%= form.label :password %>
+    <%=form.password_field :password, class:"form-control",placeholder:"password" %>
+    <%= link_to "Forgot your password?", password1_reset1_path %>
+    </div>
+
+    <div class="mb-3">
+    <%=  form.submit "sign in", class: "btn btn-primary" %>
+    </div>
+<% end %>
