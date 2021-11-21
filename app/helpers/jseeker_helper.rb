@@ -1,0 +1,2 @@
+module JseekerHelper
+end

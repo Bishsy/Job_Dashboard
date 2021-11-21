@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   patch "password", to: "passwords#update"
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
+  resources :jseeker, only: [:index,:create,:show]
+  get "jseekerd", to: "jseeker#dashboard"
 
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
@@ -22,8 +24,8 @@ Rails.application.routes.draw do
 
   get "password1", to: "passwords1#edit", as: :edit_password1
   patch "password1", to: "passwords1#update"
-  get "sign_up1", to: "registrationjs#new"
-  post "sign_up1", to: "registrationjs#create"
+  #get "sign_up1", to: "registrationjs#new"
+  #post "sign_up1", to: "registrationjs#create"
 
   get "sign_in1", to: "sessions1#new"
   post "sign_in1", to: "sessions1#create"

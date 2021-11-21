@@ -5,12 +5,13 @@ class Sessions1Controller < ApplicationController
     end
 
     def create
-        jseeker=Jseeker.find_by(email: params[:email])
+        #jseeker=Jseeker.find_by(email: params[:email])
         jseeker=Jseeker.find_by(mobile: params[:mobile])
 
         if jseeker.present? && jseeker.authenticate(params[:password])
             session[:jseeker_id]=jseeker.id
-            redirect_to root_path, notice: "logged in successfully"
+            @jseeker=jseeker.id
+            redirect_to jseeker_path(@jseeker), notice: "logged in successfully"
         else
             flash[:alert] = "Invalid email or password"
             render :new

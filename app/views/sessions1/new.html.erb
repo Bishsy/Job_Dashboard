@@ -1,10 +1,14 @@
 <h1>Sign in JobSeeker</h1>
 
+<div class="mb-3">
+<%= button_to "Sign in as Employer", sign_in_path, :id => "open-contacts-dialog-btn",
+      :class => "btn btn-primary btn-sm", :method => :get %>
+</div>
 
 <%= form_with url: sign_in1_path do |form| %>
     <div class="mb-3">
-    <%= form.label :mobile %>
-    <%=form.text_field :mobile, class: "form-control", placeholder: "steve@apple.com" %>
+    <%= form.label :"mobile number" %>
+    <%=form.text_field :mobile, class: "form-control", placeholder:"1234567890"%>
     </div>
 
     <div class="mb-3">

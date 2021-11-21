@@ -1,0 +1,48 @@
+<h1>Sign UP For JobSeeker</h1>
+<div class="mb-3">
+<%= button_to "Sign Up as Employer", sign_up_path, :id => "open-contacts-dialog-btn",
+      :class => "btn btn-primary btn-sm", :method => :get %>
+</div>
+ 
+
+<%=form_with model: @jseeker, url: jseeker_index_path do |form| %>
+    <% if @jseeker.errors.any? %>
+        <div class="alert alert-danger">
+        <% @jseeker.errors.full_messages.each do |message| %>
+        <div><%=message %></div>
+        <% end %>
+        </div>
+    <% end %>
+    <div class="mb-3">
+    <%= form.label :Full_Name%>
+    <%=form.text_field :name, class: "form-control"%>
+    </div>
+    <div class="mb-3">
+    <%= form.label :email %>
+    <%=form.text_field :email, class: "form-control", placeholder: "steve@apple.com" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :Mobile_No %>
+    <%=form.text_field  :mobile, class: "form-control"%>
+    </div>
+      
+    <div class="mb-3">
+    <%= form.label :Percentage %>
+    <%=form.text_field  :percentage, class: "form-control"%>
+    </div>
+    
+   
+    <div class="mb-3">
+    <%= form.label :password %>
+    <%=form.password_field :password, class:"form-control",placeholder:"password" %>
+    </div>
+    
+    <div class="mb-3">
+    <%= form.label :password_confrimation %>
+    <%=form.password_field :password_confirmation, class:"form-control",placeholder:"password"%>
+    </div>
+
+    <div class="mb-3">
+    <%=  form.submit "sign up", class: "btn btn-primary" %>
+    </div>
+<% end %>

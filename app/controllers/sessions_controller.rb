@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user=User.find_by(email: params[:email])
+        #user=User.find_by(email: params[:email])
         user=User.find_by(mobileno: params[:mobileno])
 
         if user.present? && user.authenticate(params[:password])

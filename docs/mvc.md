@@ -6,7 +6,7 @@ Host: 127.0.0.1
 
 
 
-## Routers
+## Routes
 Matchers for the url that is requested
 GET for "/about"
 
