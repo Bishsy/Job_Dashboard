@@ -1,5 +1,5 @@
-class RegistrationsController < ApplicationController
-    def new
+class UserController < ApplicationController
+    def index
         @user =User.new
     end
 
@@ -11,7 +11,8 @@ class RegistrationsController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id]=@user.id
-            redirect_to root_path, notice: "Succesfully created"
+            @user = user.id
+            redirect_to user_path(@user), notice: "Succesfully created"
         else  
             render :new
         end

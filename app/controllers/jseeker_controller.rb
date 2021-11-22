@@ -18,8 +18,12 @@ class JseekerController < ApplicationController
     end
 
     def show
-    
+        @jobs = Job.all
         render :dashboard
+    end
+
+    def dashboard
+        @jobs = Job.all
     end
     private
 

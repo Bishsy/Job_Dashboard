@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_11_20_162848) do
 
   create_table "applied_fors", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: "1"
     t.integer "job_id", null: false
     t.integer "jseeker_id", null: false
     t.datetime "created_at", precision: 6, null: false

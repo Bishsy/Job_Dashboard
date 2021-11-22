@@ -1,1 +1,11 @@
 <h1> Available Jobs </h1>
+<ul>
+  <% @jobs.each do |job| %>
+    <li>
+    <%= link_to job.job_title, [job.user , job ] %><br>
+      
+      <%=job.job_des%>
+      
+    </li>
+  <% end %>
+</ul>
