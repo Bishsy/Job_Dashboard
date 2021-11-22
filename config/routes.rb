@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #get "sign_up", to: "registrations#new"
   #post "sign_up", to: "registrations#create"
   resources :jseeker, only: [:index,:create,:show]
-  get "jseekerd", to: "jseeker#dashboard"
+  
   resources :user do
     resources :job
   end

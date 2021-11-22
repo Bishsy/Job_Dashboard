@@ -12025,3 +12025,711 @@ Processing by UserController#show as HTML
 Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.1ms | Allocations: 5595)
 
 
+Started DELETE "/logout" for ::1 at 2021-11-22 15:43:28 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms | Allocations: 1649)
+
+
+Started GET "/" for ::1 at 2021-11-22 15:43:28 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 626)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 5264)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 6663)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-22 15:43:29 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 6436)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 7580)
+
+
+Started POST "/sign_in1" for ::1 at 2021-11-22 15:43:37 +0530
+Processing by Sessions1Controller#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobile"=>"890123457890", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."mobile" = ? LIMIT ?[0m  [["mobile", "890123457890"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions1_controller.rb:9:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 248ms (ActiveRecord: 0.7ms | Allocations: 7886)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:43:37 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 10.4ms | Allocations: 6158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 285)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 10168)
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 1.0ms | Allocations: 12744)
+
+
+Started GET "/jseekerd" for ::1 at 2021-11-22 15:44:32 +0530
+Processing by JseekerController#dashboard as HTML
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 7873)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms | Allocations: 9792)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:44:33 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6415)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 7444)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+app/controllers/jseeker_controller.rb:22:in `show'
+Started GET "/sign_in1" for ::1 at 2021-11-22 15:44:42 +0530
+Processing by Sessions1Controller#new as HTML
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 7627)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms | Allocations: 9233)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/user/4" for ::1 at 2021-11-22 15:44:44 +0530
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 1448)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5300)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 7002)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:45:11 +0530
+Processing by MainController#index as HTML
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 5343)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.1ms | Allocations: 7073)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:46:12 +0530
+Processing by MainController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5218)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.0ms | Allocations: 12495)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:46:53 +0530
+Processing by MainController#index as HTML
+  [1m[36mJseeker Load (0.5ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1526)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5757)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms | Allocations: 7727)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"jseeker", :id=>nil}, missing required keys: [:id]):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:49:03 +0530
+Processing by MainController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 1093)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4844)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms | Allocations: 12121)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"jseeker", :id=>nil}, missing required keys: [:id]):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:49:15 +0530
+Processing by MainController#index as HTML
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.4ms | Allocations: 1898)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 6129)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms | Allocations: 8099)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:50:31 +0530
+Processing by MainController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5218)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.1ms | Allocations: 12497)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/sign_in" for ::1 at 2021-11-22 15:50:34 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7519)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 9345)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker_path(@jseeker.id), class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/sign_in" for ::1 at 2021-11-22 15:51:43 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 9.2ms | Allocations: 4848)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 11284)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms | Allocations: 13254)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `jseeker' for #<ActionView::Base:0x00000000023d98>
+Did you mean?  jseeker_url):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker, class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:54:18 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 7.9ms | Allocations: 5295)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 12218)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.6ms | Allocations: 22900)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `jseeker' for #<ActionView::Base:0x00000000008fc0>
+Did you mean?  jseeker_url):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", jseeker, class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:54:45 +0530
+Processing by MainController#index as HTML
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 9.0ms | Allocations: 4849)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 9082)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms | Allocations: 11096)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `jseeker' for #<ActionView::Base:0x000000000094c0>
+Did you mean?  jseeker_url):
+    3:           <% if Current.jseeker%>
+    4:             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    5:             <div class="container-fluid">
+    6:             <%=link_to "Home", [jseeker], class:"navbar-brand" %>
+    7:             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    8:               <span class="navbar-toggler-icon"></span>
+    9:             </button>
+  
+app/views/shared/_navbar.html.erb:6
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-11-22 15:56:01 +0530
+Processing by MainController#index as HTML
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 7.6ms | Allocations: 1635)
+  Rendered shared/_flash.html.erb (Duration: 4.5ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 6289)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 0.2ms | Allocations: 8360)
+
+
+Started DELETE "/logout1" for ::1 at 2021-11-22 15:56:06 +0530
+Processing by Sessions1Controller#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1170)
+
+
+Started GET "/" for ::1 at 2021-11-22 15:56:06 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 162)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3945)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 4453)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-22 15:56:08 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 147)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8184)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 9321)
+
+
+Started GET "/sign_in" for ::1 at 2021-11-22 15:56:10 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2476)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 6347)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 7576)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-22 15:56:14 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5765)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6274)
+
+
+Started POST "/sign_in1" for ::1 at 2021-11-22 15:56:24 +0530
+Processing by Sessions1Controller#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobile"=>"890123457890", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mJseeker Load (0.4ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."mobile" = ? LIMIT ?[0m  [["mobile", "890123457890"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions1_controller.rb:9:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 232ms (ActiveRecord: 0.4ms | Allocations: 1280)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:56:25 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 31.5ms | Allocations: 13358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | Allocations: 371)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 17475)
+Completed 200 OK in 51ms (Views: 42.7ms | ActiveRecord: 2.0ms | Allocations: 21067)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:56:28 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1588)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5432)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 7128)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:56:31 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1519)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5354)
+Completed 200 OK in 23ms (Views: 15.2ms | ActiveRecord: 0.8ms | Allocations: 6897)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:57:12 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 16.2ms | Allocations: 10814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 363)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 14911)
+Completed 200 OK in 44ms (Views: 22.4ms | ActiveRecord: 2.4ms | Allocations: 23561)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:57:29 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 16.2ms | Allocations: 10834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 363)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 14931)
+Completed 200 OK in 37ms (Views: 21.8ms | ActiveRecord: 2.3ms | Allocations: 23558)
+
+
+Started DELETE "/logout1" for ::1 at 2021-11-22 15:57:30 +0530
+Processing by Sessions1Controller#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mJseeker Load (0.7ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms | Allocations: 1129)
+
+
+Started GET "/" for ::1 at 2021-11-22 15:57:30 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4066)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4864)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-22 15:57:32 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 148)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6161)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 6910)
+
+
+Started POST "/sign_in1" for ::1 at 2021-11-22 15:57:38 +0530
+Processing by Sessions1Controller#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobile"=>"890123457890", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."mobile" = ? LIMIT ?[0m  [["mobile", "890123457890"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions1_controller.rb:9:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 230ms (ActiveRecord: 0.2ms | Allocations: 1246)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:57:39 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 262)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5418)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.5ms | Allocations: 6990)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-22 15:57:41 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:22:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5353)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 6896)
+
+
