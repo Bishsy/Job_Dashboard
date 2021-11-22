@@ -18,9 +18,11 @@ class JseekerController < ApplicationController
     end
 
     def show
-    
+        @jobs = Job.all
+        @jseeker = Jseeker.find(params[:id])
         render :dashboard
     end
+
     private
 
     

@@ -1,0 +1,42 @@
+<h1>Sign UP For Employer</h1>
+
+<%=form_with model: @user, url: user_index_path do |form| %>
+    <% if @user.errors.any? %>
+        <div class="alert alert-danger">
+        <% @user.errors.full_messages.each do |message| %>
+        <div><%=message %></div>
+        <% end %>
+        </div>
+    <% end %>
+
+    <div class="mb-3">
+    <%= form.label :email %>
+    <%=form.text_field :email, class: "form-control", placeholder: "steve@apple.com" %>
+  
+        <div class="mb-3">
+    <%= form.label :CompanyName %>
+    <%=form.text_field :cname, class: "form-control"%>
+    </div>
+        <div class="mb-3">
+    <%= form.label :CIN_Number %>
+    <%=form.text_field  :cinumber, class: "form-control"%>
+    </div>
+    </div>
+       <div class="mb-3">
+    <%= form.label :Mobile_No %>
+    <%=form.text_field  :mobileno, class: "form-control"%>
+    </div>
+    <div class="mb-3">
+    <%= form.label :password %>
+    <%=form.password_field :password, class:"form-control",placeholder:"password" %>
+    </div>
+    
+    <div class="mb-3">
+    <%= form.label :password_confrimation %>
+    <%=form.password_field :password_confirmation, class:"form-control",placeholder:"password"%>
+    </div>
+
+    <div class="mb-3">
+    <%=  form.submit "sign up", class: "btn btn-primary" %>
+    </div>
+<% end %>

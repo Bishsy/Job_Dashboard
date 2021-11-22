@@ -1,0 +1,6 @@
+<h1><%= @job.job_title %></h1>
+
+<p><%= @job.job_des %></p>
+
+<%= button_to "Apply", applied_fors_path, :id => "open-contacts-dialog-btn",
+      :class => "btn btn-primary btn-sm", :method => :get %>

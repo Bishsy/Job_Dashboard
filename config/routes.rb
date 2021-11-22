@@ -4,10 +4,16 @@ Rails.application.routes.draw do
 
   get "password", to: "passwords#edit", as: :edit_password
   patch "password", to: "passwords#update"
-  get "sign_up", to: "registrations#new"
-  post "sign_up", to: "registrations#create"
+  #get "sign_up", to: "registrations#new"
+  #post "sign_up", to: "registrations#create"
   resources :jseeker, only: [:index,:create,:show]
-  get "jseekerd", to: "jseeker#dashboard"
+  
+  resources :user do
+    resources :job
+  end
+ 
+
+resources :applied_fors
 
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
