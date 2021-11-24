@@ -1,0 +1,22 @@
+<h1>Welcome to dashboard of Employer</h1>
+  <p>
+    
+  </p>
+ <h2>Listed Jobs</h2>
+<% @user.jobs.each do |a| %>
+  <p>
+    <strong>Job title:</strong>
+   <li><%= link_to a.job_title, [a.user , a ]%>
+     
+    
+    <%= a.job_des %></li></p>
+    <p>
+     <%= link_to "Delete Job", [a.user, a],
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  </p>
+
+  <p>
+    
+  </p>
+<% end %>

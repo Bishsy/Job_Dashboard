@@ -2,11 +2,34 @@
 
 <p><%= @job.job_des %></p>
 
+<% if Current.jseeker%>
+    <%=form_with model: @applied_for, url: jseeker_job_applied_for_index_path(@jseeker,@job) do |form| %>
+    <div class="mb-3">
+        <%= form.hidden_field :id, value: params[:id] %>
+        <%if @job.job_percat <= @jseeker.percentage%>
+        <p>Eligible</p>
+        <%=  form.submit "Apply", class: "btn btn-primary" %>
+    <%else%>
+            <p>Not Eligible</p>
+            Required percentage should me more than <%=@job.job_percat%> but your percentage is <%=@jseeker.percentage%>
+    <%end%>
+        
+    </div>
+    
+    <%end%>
 
-<%=form_with model: @applied_for, url: jseeker_job_applied_for_index_path(@jseeker,@job) do |form| %>
- 
- <div class="mb-3">
-     <%= form.hidden_field :id, value: params[:id] %>
-    <%=  form.submit "Apply", class: "btn btn-primary" %>
-</div>
+<%else%>
+    <%@js.zip(@a) do |a, b|%>
+    <%=a.name%>
+    <% if b.status==1%>
+            <%="pending"%>
+            <%=link_to "Approve", edit_jseeker_job_applied_for_path(a.id,b.job_id,b.id) %>
+             <%=link_to "Reject", jseeker_job_applied_for_path(a.id,b.job_id,b.id) %><br>
+    <% elsif b.status==2%>
+            <%=" already approved"%><br>
+    <%else%>
+            <%="rejected"%><br>
+        <%end%>
+        <br>
+    <%end%>
 <%end%>

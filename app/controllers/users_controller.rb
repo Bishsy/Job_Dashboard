@@ -1,10 +1,11 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
     def index
         @user =User.new
     end
 
     def show
         @user=User.find(params[:id])
+        
     end
 
     def create
@@ -22,7 +23,7 @@ class UserController < ApplicationController
         end
     end
     private
-
+   
     def user_params
         params.require(:user).permit(:email, :cname, :cinumber, :mobileno,:password,:password_confirmation)
     end
