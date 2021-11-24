@@ -1,0 +1,15 @@
+<h1>Status of Applied Jobs</h1>
+<% @job.zip(@a) do |a, b| %>
+    <p>
+        <%=a.job_title%>
+        <% if b.status==1%>
+            <%="pending"%><br>
+        <% elsif b.status==2%>
+            <%="approved"%><br>
+        <%else%>
+            <%="rejected"%><br>
+        <%end%>
+        <%=a.job_des%>
+        
+    </p>
+<% end %>

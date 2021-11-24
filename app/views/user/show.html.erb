@@ -1,1 +1,32 @@
-<h1>Employer Dashboard</h1>
+<div class="d-flex align-items-center justify-content-center flex-column">
+<h1 class="mb-5">Welcome to Employer Dashboard</h1>
+
+
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+<h1>Post New Job</h1>
+<hr>
+<%= form_with model: [ @user, @user.jobs.build] do |form| %>
+  <div class="mb-3">
+    <%= form.label :job_title , "JOB TITLE" %><br>
+    <%= form.text_field :job_title , class: "form-control", placeholder:"Job title"%>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :job_des , "JOB DESCRIPTION" %><br>
+    <%= form.text_area :job_des ,class: "form-control", placeholder:"Job title" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :job_percat , "MINIMUM PERCANTAGE REQUIRED" %><br>
+    <%= form.number_field :job_percat ,class: "form-control", placeholder:"Job title"%>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "POST", class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+</div>
+
+</div>

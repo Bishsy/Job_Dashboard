@@ -3,6 +3,10 @@ class UserController < ApplicationController
         @user =User.new
     end
 
+    def show
+        @user=User.find(params[:id])
+    end
+
     def create
         #params
      #  @user= User.new(params[:user])
@@ -11,7 +15,7 @@ class UserController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id]=@user.id
-            @user = user.id
+            @user = @user.id
             redirect_to user_path(@user), notice: "Succesfully created"
         else  
             render :new

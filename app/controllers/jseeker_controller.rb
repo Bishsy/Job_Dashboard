@@ -17,6 +17,16 @@ class JseekerController < ApplicationController
         end
     end
 
+    def status
+        @jseeker = Jseeker.find(session[:jseeker_id])
+        @a = AppliedFor.where(jseeker_id: @jseeker.id)
+        @job = []
+        @a.each do |b|
+            tjob = Job.where(id: b.job_id)
+            @job += tjob if tjob
+        end 
+    end
+
     def show
         @jobs = Job.all
         @jseeker = Jseeker.find(params[:id])

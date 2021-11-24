@@ -6,14 +6,21 @@ Rails.application.routes.draw do
   patch "password", to: "passwords#update"
   #get "sign_up", to: "registrations#new"
   #post "sign_up", to: "registrations#create"
-  resources :jseeker, only: [:index,:create,:show]
+  resources :jseeker do
+    
+    resources :job do
+      resources :applied_for
+    end
+  end
   
   resources :user do
-    resources :job
+    resources :jobs, only: [:index, :create, :new,:show]
   end
+
+  get "status", to: "jseeker#status"
  
 
-resources :applied_fors
+#resources :applied_fors
 
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
