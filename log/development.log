@@ -22835,3 +22835,1378 @@ Processing by JobsController#show as HTML
 Completed 200 OK in 37ms (Views: 16.6ms | ActiveRecord: 0.9ms | Allocations: 6981)
 
 
+Started GET "/status" for ::1 at 2021-11-24 12:30:37 +0530
+Processing by JseekerController#status as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:21:in `status'
+  [1m[36mAppliedFor Load (0.2ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ?[0m  [["jseeker_id", 7]]
+  ↳ app/controllers/jseeker_controller.rb:24:in `status'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/status.html.erb within layouts/application
+  Rendered jseeker/status.html.erb within layouts/application (Duration: 1.5ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 269)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4212)
+Completed 200 OK in 70ms (Views: 22.5ms | ActiveRecord: 2.1ms | Allocations: 9592)
+
+
+Started GET "/status" for ::1 at 2021-11-24 12:30:52 +0530
+Processing by JseekerController#status as HTML
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:21:in `status'
+  [1m[36mAppliedFor Load (0.1ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ?[0m  [["jseeker_id", 7]]
+  ↳ app/controllers/jseeker_controller.rb:24:in `status'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/status.html.erb within layouts/application
+  Rendered jseeker/status.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 269)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3933)
+Completed 200 OK in 29ms (Views: 10.6ms | ActiveRecord: 0.5ms | Allocations: 8449)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 12:32:17 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 26.2ms | Allocations: 3187)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 7022)
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 1.2ms | Allocations: 8570)
+
+
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 12:33:28 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 368)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4452)
+Completed 200 OK in 56ms (Views: 10.0ms | ActiveRecord: 3.1ms | Allocations: 25593)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 12:33:29 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.4ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:11:in `create'
+Completed 404 Not Found in 15ms (ActiveRecord: 0.4ms | Allocations: 1922)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Job without an ID):
+  
+app/controllers/applied_for_controller.rb:13:in `create'
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 12:33:59 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 368)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4462)
+Completed 200 OK in 55ms (Views: 10.8ms | ActiveRecord: 3.5ms | Allocations: 25598)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 12:34:00 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:11:in `create'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1900)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Job without an ID):
+  
+app/controllers/applied_for_controller.rb:13:in `create'
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 12:34:35 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 368)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4463)
+Completed 200 OK in 68ms (Views: 12.9ms | ActiveRecord: 3.2ms | Allocations: 25620)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 12:34:36 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:11:in `create'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:13:in `create'
+  [1m[36mAppliedFor Load (0.6ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 1]]
+  ↳ app/controllers/applied_for_controller.rb:16:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 44ms (ActiveRecord: 3.2ms | Allocations: 6717)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 12:34:36 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.7ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (1.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 21.4ms | Allocations: 3832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 298)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 7952)
+Completed 200 OK in 51ms (Views: 38.7ms | ActiveRecord: 3.1ms | Allocations: 9925)
+
+
+Started GET "/user/6/jobs/3" for ::1 at 2021-11-24 12:34:44 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"6", "id"=>"3"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (6) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (1.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (3) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4057)
+Completed 200 OK in 29ms (Views: 12.0ms | ActiveRecord: 2.1ms | Allocations: 7070)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 12:34:45 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:11:in `create'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:13:in `create'
+  [1m[36mAppliedFor Load (0.2ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 1]]
+  ↳ app/controllers/applied_for_controller.rb:16:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 24ms (ActiveRecord: 1.1ms | Allocations: 2596)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 12:34:45 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.4ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.6ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (4.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 38.4ms | Allocations: 3147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 6987)
+Completed 200 OK in 67ms (Views: 45.4ms | ActiveRecord: 5.6ms | Allocations: 8538)
+
+
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 12:35:33 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 10.5ms | Allocations: 254)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 4045)
+Completed 200 OK in 62ms (Views: 44.7ms | ActiveRecord: 1.0ms | Allocations: 6982)
+
+
+Started GET "/user/6/jobs/3" for ::1 at 2021-11-24 12:35:38 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"6", "id"=>"3"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (6) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (3) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4052)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 6992)
+
+
+Started GET "/user/3/jobs/2" for ::1 at 2021-11-24 12:35:45 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"2"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (2) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4052)
+Completed 200 OK in 29ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 6990)
+
+
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 12:35:52 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 4155)
+Completed 200 OK in 41ms (Views: 21.2ms | ActiveRecord: 1.0ms | Allocations: 7595)
+
+
+Started GET "/password1" for ::1 at 2021-11-24 12:36:12 +0530
+Processing by Passwords1Controller#edit as HTML
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  Rendering layout layouts/application.html.erb
+  Rendering passwords1/edit.html.erb within layouts/application
+  Rendered passwords1/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 1124)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 6067)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.1ms | Allocations: 8019)
+
+
+Started GET "/status" for ::1 at 2021-11-24 12:36:13 +0530
+Processing by JseekerController#status as HTML
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:21:in `status'
+  [1m[36mAppliedFor Load (0.6ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ?[0m  [["jseeker_id", 7]]
+  ↳ app/controllers/jseeker_controller.rb:24:in `status'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jseeker_controller.rb:26:in `+'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/status.html.erb within layouts/application
+  Rendered jseeker/status.html.erb within layouts/application (Duration: 0.1ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 279)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3947)
+Completed 200 OK in 45ms (Views: 6.9ms | ActiveRecord: 1.7ms | Allocations: 8693)
+
+
+Started DELETE "/logout1" for ::1 at 2021-11-24 12:36:25 +0530
+Processing by Sessions1Controller#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1128)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:36:25 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 191)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4068)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 4865)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-24 12:36:27 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 149)
+  Rendered shared/_flash.html.erb (Duration: 3.5ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 6162)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 6910)
+
+
+Started GET "/sign_in" for ::1 at 2021-11-24 12:36:28 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 6321)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.0ms | Allocations: 7539)
+
+
+Started POST "/sign_in" for ::1 at 2021-11-24 12:36:36 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobileno"=>"1111111111", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."mobileno" = ? LIMIT ?[0m  [["mobileno", "1111111111"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/user/4
+Completed 302 Found in 233ms (ActiveRecord: 0.2ms | Allocations: 1255)
+
+
+Started GET "/user/4" for ::1 at 2021-11-24 12:36:36 +0530
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 258)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4978)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 0.3ms | Allocations: 7216)
+
+
+Started POST "/user/4/jobs" for ::1 at 2021-11-24 12:36:47 +0530
+Processing by JobsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "job"=>{"job_title"=>"ror", "job_des"=>"asdf", "job_percat"=>"89"}, "commit"=>"POST", "user_id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:10:in `create'
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("job_title", "job_des", "job_percat", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["job_title", "ror"], ["job_des", "asdf"], ["job_percat", 89], ["user_id", 4], ["created_at", "2021-11-24 07:06:47.456375"], ["updated_at", "2021-11-24 07:06:47.456375"]]
+  ↳ app/controllers/jobs_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:10:in `create'
+Redirected to http://localhost:3000/user/4
+Completed 302 Found in 36ms (ActiveRecord: 6.5ms | Allocations: 4399)
+
+
+Started GET "/user/4" for ::1 at 2021-11-24 12:36:47 +0530
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 670)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 223)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 4492)
+Completed 200 OK in 44ms (Views: 27.8ms | ActiveRecord: 0.8ms | Allocations: 6068)
+
+
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+Started DELETE "/logout" for ::1 at 2021-11-24 12:42:20 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms | Allocations: 1524)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:42:20 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 145)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3786)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-24 12:42:23 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 131)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5784)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started GET "/about" for ::1 at 2021-11-24 12:42:25 +0530
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 190)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4151)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 5372)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-24 12:42:26 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5810)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 6319)
+
+
+Started GET "/about" for ::1 at 2021-11-24 12:45:21 +0530
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 145)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3781)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 4242)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:45:22 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 145)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 3782)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 4322)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-24 12:45:24 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 131)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 5764)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 6225)
+
+
+Started POST "/sign_in1" for ::1 at 2021-11-24 12:47:09 +0530
+Processing by Sessions1Controller#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobile"=>"1111111111", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mJseeker Load (0.5ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."mobile" = ? LIMIT ?[0m  [["mobile", "1111111111"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions1_controller.rb:9:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5725)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.5ms | Allocations: 7024)
+
+
+Started GET "/sign_in" for ::1 at 2021-11-24 12:47:11 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 131)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 63)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 5734)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.0ms | Allocations: 6202)
+
+
+Started POST "/sign_in" for ::1 at 2021-11-24 12:50:41 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobileno"=>"1111111111", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."mobileno" = ? LIMIT ?[0m  [["mobileno", "1111111111"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/user/4
+Completed 302 Found in 234ms (ActiveRecord: 0.2ms | Allocations: 935)
+
+
+Started GET "/user/4" for ::1 at 2021-11-24 12:50:41 +0530
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4542)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 6110)
+
+
+Started GET "/sign_in" for ::1 at 2021-11-24 12:50:44 +0530
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 229)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 5815)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.2ms | Allocations: 6826)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:56:44 +0530
+Processing by MainController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 305)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 4176)
+Completed 200 OK in 41ms (Views: 23.0ms | ActiveRecord: 0.5ms | Allocations: 11447)
+
+
+Started DELETE "/logout" for ::1 at 2021-11-24 12:56:48 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1108)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:56:48 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3938)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 4443)
+
+
+Started GET "/sign_in1" for ::1 at 2021-11-24 12:56:50 +0530
+Processing by Sessions1Controller#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions1/new.html.erb within layouts/application
+  Rendered sessions1/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2267)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 147)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 6133)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 6926)
+
+
+Started POST "/sign_in1" for ::1 at 2021-11-24 12:56:56 +0530
+Processing by Sessions1Controller#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "mobile"=>"890123457890", "password"=>"[FILTERED]", "commit"=>"sign in"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."mobile" = ? LIMIT ?[0m  [["mobile", "890123457890"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions1_controller.rb:9:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 242ms (ActiveRecord: 0.2ms | Allocations: 6224)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 12:56:56 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.4ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 26.8ms | Allocations: 8076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 357)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 12168)
+Completed 200 OK in 55ms (Views: 41.7ms | ActiveRecord: 1.9ms | Allocations: 16113)
+
+
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 12:57:00 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mJseeker Load (0.7ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 293)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4365)
+Completed 200 OK in 30ms (Views: 9.0ms | ActiveRecord: 1.5ms | Allocations: 8374)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 12:57:02 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2313)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/applied_for_controller.rb:14:in `create'
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 13:06:35 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 368)
+  Rendered shared/_flash.html.erb (Duration: 1.8ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4463)
+Completed 200 OK in 108ms (Views: 26.7ms | ActiveRecord: 1.8ms | Allocations: 24320)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:06:37 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.6ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (0.5ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 1]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 43ms (ActiveRecord: 1.3ms | Allocations: 6347)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:06:37 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.5ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 27.7ms | Allocations: 4672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 298)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 8792)
+Completed 200 OK in 52ms (Views: 39.9ms | ActiveRecord: 2.3ms | Allocations: 10765)
+
+
+Started GET "/user/4/jobs/4" for ::1 at 2021-11-24 13:06:41 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"4"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (4) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (4) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 1.5ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4057)
+Completed 200 OK in 29ms (Views: 16.2ms | ActiveRecord: 0.7ms | Allocations: 7070)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:06:42 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.6ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (1.0ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 1]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 17ms (ActiveRecord: 1.7ms | Allocations: 2596)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:06:42 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.3ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 24.2ms | Allocations: 3987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 7827)
+Completed 200 OK in 41ms (Views: 32.8ms | ActiveRecord: 1.7ms | Allocations: 9378)
+
+
+Started GET "/user/4/jobs/4" for ::1 at 2021-11-24 13:07:16 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"4"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (4) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (4) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4044)
+Completed 200 OK in 34ms (Views: 20.6ms | ActiveRecord: 0.9ms | Allocations: 6978)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:07:19 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (1.7ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 20.8ms | Allocations: 3988)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 7838)
+Completed 200 OK in 43ms (Views: 28.5ms | ActiveRecord: 2.9ms | Allocations: 9383)
+
+
+Started GET "/user/6/jobs/3" for ::1 at 2021-11-24 13:07:22 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"6", "id"=>"3"}
+  [1m[36mJseeker Load (0.5ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (6) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (3) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4049)
+Completed 200 OK in 30ms (Views: 13.8ms | ActiveRecord: 1.1ms | Allocations: 6987)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:07:23 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (0.1ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 1]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 2575)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:07:23 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.4ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 7827)
+Completed 200 OK in 45ms (Views: 36.9ms | ActiveRecord: 1.1ms | Allocations: 9374)
+
+
+Started GET "/user/3/jobs/1" for ::1 at 2021-11-24 13:43:14 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (1) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 813)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 6396)
+Completed 200 OK in 59ms (Views: 21.9ms | ActiveRecord: 0.8ms | Allocations: 26936)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:43:16 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (1.1ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 1]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 20ms (ActiveRecord: 1.4ms | Allocations: 6369)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:43:16 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 298)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 8960)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 1.7ms | Allocations: 11351)
+
+
+Started GET "/user/4/jobs/4" for ::1 at 2021-11-24 13:43:18 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"4"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (4) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (4) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 767)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4506)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 7519)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:43:19 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (0.1ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 4]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mAppliedFor Create (0.4ms)[0m  [1m[32mINSERT INTO "applied_fors" ("status", "job_id", "jseeker_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["status", 1], ["job_id", 4], ["jseeker_id", 7], ["created_at", "2021-11-24 08:13:19.522551"], ["updated_at", "2021-11-24 08:13:19.522551"]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 34ms (ActiveRecord: 9.2ms | Allocations: 8177)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:43:19 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 78.2ms | Allocations: 3987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.1ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 7836)
+Completed 200 OK in 116ms (Views: 89.1ms | ActiveRecord: 1.4ms | Allocations: 9391)
+
+
+Started GET "/user/6/jobs/3" for ::1 at 2021-11-24 13:43:22 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"6", "id"=>"3"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (6) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (3) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4494)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 7431)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:43:23 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (0.2ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 3]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mAppliedFor Create (0.4ms)[0m  [1m[32mINSERT INTO "applied_fors" ("status", "job_id", "jseeker_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["status", 1], ["job_id", 3], ["jseeker_id", 7], ["created_at", "2021-11-24 08:13:23.189510"], ["updated_at", "2021-11-24 08:13:23.189510"]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 31ms (ActiveRecord: 6.8ms | Allocations: 6482)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:43:23 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 17.0ms | Allocations: 3987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 7836)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 1.6ms | Allocations: 9384)
+
+
+Started GET "/user/3/jobs/2" for ::1 at 2021-11-24 13:43:24 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"2"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (2) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4491)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 7428)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:43:25 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (0.1ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 2]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mAppliedFor Create (0.5ms)[0m  [1m[32mINSERT INTO "applied_fors" ("status", "job_id", "jseeker_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["status", 1], ["job_id", 2], ["jseeker_id", 7], ["created_at", "2021-11-24 08:13:25.934994"], ["updated_at", "2021-11-24 08:13:25.934994"]]
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/applied_for_controller.rb:22:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 25ms (ActiveRecord: 2.6ms | Allocations: 6482)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:43:25 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.8ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 14.4ms | Allocations: 3987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 7831)
+Completed 200 OK in 31ms (Views: 20.2ms | ActiveRecord: 1.9ms | Allocations: 9378)
+
+
+Started GET "/user/3/jobs/2" for ::1 at 2021-11-24 13:43:27 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"2"}
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:3:in `show'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = ? AND (2) LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4:in `show'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 751)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4490)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 7427)
+
+
+Started POST "/jseeker/7/job/1/applied_for" for ::1 at 2021-11-24 13:43:28 +0530
+Processing by AppliedForController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2", "commit"=>"Apply", "jseeker_id"=>"7", "job_id"=>"1"}
+  [1m[36mJseeker Load (0.2ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mCACHE Jseeker Load (0.0ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:12:in `create'
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/applied_for_controller.rb:14:in `create'
+  [1m[36mAppliedFor Load (0.1ms)[0m  [1m[34mSELECT "applied_fors".* FROM "applied_fors" WHERE "applied_fors"."jseeker_id" = ? AND "applied_fors"."job_id" = ?[0m  [["jseeker_id", 7], ["job_id", 2]]
+  ↳ app/controllers/applied_for_controller.rb:18:in `create'
+Redirected to http://localhost:3000/jseeker/7
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 2547)
+
+
+Started GET "/jseeker/7" for ::1 at 2021-11-24 13:43:28 +0530
+Processing by JseekerController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mJseeker Load (0.4ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `set_current_jseeker'
+  [1m[36mJseeker Load (0.1ms)[0m  [1m[34mSELECT "jseekers".* FROM "jseekers" WHERE "jseekers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jseeker_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering jseeker/dashboard.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jseeker/dashboard.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/jseeker/dashboard.html.erb:5
+  Rendered jseeker/dashboard.html.erb within layouts/application (Duration: 17.6ms | Allocations: 3987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 257)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 7827)
+Completed 200 OK in 36ms (Views: 28.0ms | ActiveRecord: 1.7ms | Allocations: 9373)
+
+

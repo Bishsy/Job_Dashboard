@@ -6,6 +6,7 @@
 <%=form_with model: @applied_for, url: jseeker_job_applied_for_index_path(@jseeker,@job) do |form| %>
  
  <div class="mb-3">
+     <%= form.hidden_field :id, value: params[:id] %>
     <%=  form.submit "Apply", class: "btn btn-primary" %>
 </div>
 <%end%>
