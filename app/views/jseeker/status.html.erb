@@ -1,7 +1,8 @@
 <h1>Status of Applied Jobs</h1>
 <% @job.zip(@a) do |a, b| %>
-    <p>
-        <%=a.job_title%>
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><%=a.job_title%></h5>
         <% if b.status==1%>
             <%="pending"%><br>
         <% elsif b.status==2%>
@@ -9,7 +10,14 @@
         <%else%>
             <%="rejected"%><br>
         <%end%>
-        <%=a.job_des%>
-        
-    </p>
+        <hr>
+        <p class="card-text"><%=a.job_des%></p>
+       </div>
+</div> 
+   
 <% end %>
+
+
+    
+   
+  

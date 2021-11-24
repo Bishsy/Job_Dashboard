@@ -7,6 +7,12 @@
  
  <div class="mb-3">
      <%= form.hidden_field :id, value: params[:id] %>
-    <%=  form.submit "Apply", class: "btn btn-primary" %>
+    
+    <%if @job.job_percat <= @jseeker.percentage%>
+        <p>Eligible</p>
+        <%=  form.submit "Apply", class: "btn btn-primary" %>
+    <%else%>
+            <p>Not Eligible</p>
+    <%end%>
 </div>
 <%end%>
