@@ -31,7 +31,8 @@ class AppliedForController < ApplicationController
         @applied_for = AppliedFor.find(params[:id])
         @applied_for.status = "2"
         if @applied_for.save
-            redirect_to user_job_path(@user.id,@job.id),  notice: "Applied successfully"
+            redirect_to user_job_path(@user.id,@job.id),  notice: "JobSeeker Accepted"
+            
         else
             render :index
         end
@@ -43,7 +44,7 @@ class AppliedForController < ApplicationController
         @applied_for = AppliedFor.find(params[:id])
         @applied_for.status = "3"
         if @applied_for.save
-            redirect_to user_job_path(@user.id,@job.id),  notice: "Applied successfully"
+            redirect_to user_job_path(@user.id,@job.id),  notice: "JobSeeker Rejected"
         else
             render :index
         end

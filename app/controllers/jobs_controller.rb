@@ -16,14 +16,18 @@ class JobsController < ApplicationController
             @js += tjs if tjs
         end
         
-      end
-        
-        
+      end  
     end
+    
+
     def create
         @user = User.find(params[:user_id])
-        @job = @user.jobs.create(job_params)
-        redirect_to user_path(@user), notice: "successfully created"
+        @job = @user.jobs.new(job_params)
+        if @job.save
+          redirect_to user_path(@user), notice: "successfully created"
+        else
+          render :index
+        end
     end
     def destroy
       @job = Job.find(params[:id])

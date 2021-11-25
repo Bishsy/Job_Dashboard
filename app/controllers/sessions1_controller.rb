@@ -1,10 +1,14 @@
 class Sessions1Controller < ApplicationController
 
     def new
-
+        if Jseeker.find_by(id:session[:jseeker_id])
+            redirect_to jseeker_path(@jseeker)
+        end
     end
 
     def create
+        
+        
         #jseeker=Jseeker.find_by(email: params[:email])
         jseeker=Jseeker.find_by(mobile: params[:mobile])
 
@@ -16,6 +20,7 @@ class Sessions1Controller < ApplicationController
             flash[:alert] = "Invalid email or password"
             render :new
         end
+    
     end
 
 

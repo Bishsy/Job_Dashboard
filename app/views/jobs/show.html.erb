@@ -1,4 +1,5 @@
-<h1><%= @job.job_title %></h1>
+ <div class="card border-light mb-3" style="width: 18rem;">
+<h1 class="card-title"><%= @job.job_title %></h1>
 
 <p><%= @job.job_des %></p>
 
@@ -17,19 +18,35 @@
     </div>
     
     <%end%>
-
+<div class="card-body">
 <%else%>
     <%@js.zip(@a) do |a, b|%>
-    <%=a.name%>
+  
+    
+    <h5 class="card-title"><%=a.name%></h5>
     <% if b.status==1%>
-            <%="pending"%>
-            <%=link_to "Approve", edit_jseeker_job_applied_for_path(a.id,b.job_id,b.id) %>
-             <%=link_to "Reject", jseeker_job_applied_for_path(a.id,b.job_id,b.id) %><br>
+    <div class="badge bg-warning text-wrap" style="width: 6rem;">
+        <%="pending"%>
+    </div>
+   
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <%=link_to "Approve", edit_jseeker_job_applied_for_path(a.id,b.job_id,b.id),class: "btn btn-primary btn-sm" %>
+             <%=link_to "Reject", jseeker_job_applied_for_path(a.id,b.job_id,b.id),class: "btn btn-primary btn-sm" %><br>
+             </div>
     <% elsif b.status==2%>
-            <%=" already approved"%><br>
+    <div class="badge bg-success text-wrap" style="width: 6rem;">
+        <%=" already approved"%>
+    </div>
+            <br>
     <%else%>
-            <%="rejected"%><br>
+    <div class="badge bg-danger text-wrap" style="width: 6rem;">
+        <%="rejected"%>
+    </div>
+            <br>
         <%end%>
         <br>
     <%end%>
+     </div>
+    </div>
 <%end%>

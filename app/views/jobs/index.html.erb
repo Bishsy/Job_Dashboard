@@ -7,6 +7,14 @@
 <h1>Post New Job</h1>
 <hr>
 <%= form_with model: [ @user, @user.jobs.build] do |form| %>
+<% @job ||= Job.new %>
+<% if @job.errors.any? %>
+        <div class="alert alert-danger">
+        <% @job.errors.full_messages.each do |message| %>
+        <div><%=message %></div>
+        <% end %>
+        </div>
+    <% end %>
   <div class="mb-3">
     <%= form.label :job_title , "JOB TITLE" %><br>
     <%= form.text_field :job_title , class: "form-control", placeholder:"Job title"%>
