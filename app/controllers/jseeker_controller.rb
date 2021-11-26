@@ -37,6 +37,6 @@ class JseekerController < ApplicationController
 
     
     def jseeker_params
-        params.require(:jseeker).permit(:name, :email, :mobile, :percentage ,:password, :password_confirmation)
+        params.require(:jseeker).permit(:name, :email, :mobile, :percentage ,:password, :password_confirmation,:qdegree,:jdes)
     end
 end

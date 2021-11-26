@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_20_162848) do
+ActiveRecord::Schema.define(version: 2021_11_26_071140) do
 
   create_table "applied_fors", force: :cascade do |t|
-    t.integer "status", default: "1"
+    t.integer "status"
     t.integer "job_id", null: false
     t.integer "jseeker_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 2021_11_20_162848) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+    t.string "qdegree"
+    t.text "jdes"
+    t.boolean "verified", default: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_11_20_162848) do
     t.string "cname"
     t.string "cinumber"
     t.string "mobileno"
+    t.boolean "verified", default: false
   end
 
   add_foreign_key "applied_fors", "jobs"

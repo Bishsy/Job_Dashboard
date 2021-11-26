@@ -27,11 +27,20 @@
     </div>
       
     <div class="mb-3">
+    <%= form.label :Highest_Qualified %><br>
+    <%=form.select :qdegree, ['B.Tech', 'M.tech' , 'Higher Secondary'],class: "form-control"%>
+
+    <div class="mb-3">
     <%= form.label :Percentage %>
     <%=form.text_field  :percentage, class: "form-control"%>
     </div>
+
+    </div>
+    <div class="mb-3">
+    <%= form.label :Jseeker_Description %>
+    <%=form.text_area  :jdes, class: "form-control"%>
+    </div>
     
-   
     <div class="mb-3">
     <%= form.label :password %>
     <%=form.password_field :password, class:"form-control",placeholder:"password" %>
