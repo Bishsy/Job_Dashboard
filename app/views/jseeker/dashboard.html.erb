@@ -1,11 +1,15 @@
 <h1> Available Jobs </h1>
+<hr>
 <ul>
-  <% @jobs.each do |job| %>
-    <li>
-    <%= link_to job.job_title, [job.user , job ] %><br>
-      
-      <%=job.job_des%>
-      
-    </li>
+  <% @jobs.each do |job| %>   
+  <div class="card mb-3" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to job.job_title, [job.user , job ] %></h5>
+    <hr>
+    <p class="card-text"> <%=job.job_des%></p>
+  </div>
+  </div>       
   <% end %>
 </ul>
+
+

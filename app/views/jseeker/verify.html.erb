@@ -1,19 +1,23 @@
 <% title 'Verify' %>
 
 <header><h1>Verify</h1></header>
+<div class="alert alert-primary" role="alert">
+  <p id="notice"><%= notice %></p>
+</div>
 
-<p id="notice"><%= notice %></p>
 
 <%= form_tag(verifyjseeker_url) do %>
-  <div class="field">
+  <div class="mb-3">
     <%= label_tag :verification_code %>
     <%= text_field_tag :verification_code %>
   </div>
 
   <div class="actions">
-    <%= submit_tag 'Verify' %>
+    <%= submit_tag 'Verify'  %>
   </div>
 <% end %>
 <%=@current_user%>
 
 <%= link_to 'Back', root_path %>
+
+

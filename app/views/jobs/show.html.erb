@@ -1,14 +1,17 @@
- <div class="card border-light mb-3" style="width: 18rem;">
-<h1 class="card-title"><%= @job.job_title %></h1>
+<div class="card mt-5" style="width: 58rem;">
+  
+  <div class="card-body">
 
-<p><%= @job.job_des %></p>
+    <h5 class="card-title"><%= @job.job_title %></h5>
+    <hr>
+    <p class="card-text"> <p><%= @job.job_des %></p></p>
 
 <% if Current.jseeker%>
     <%=form_with model: @applied_for, url: jseeker_job_applied_for_index_path(@jseeker,@job) do |form| %>
     <div class="mb-3">
         <%= form.hidden_field :id, value: params[:id] %>
         <%if @job.job_percat <= @jseeker.percentage%>
-        <p>Eligible</p>
+        <p><b>Eligible</b></p>
         <%=  form.submit "Apply", class: "btn btn-primary" %>
     <%else%>
             <p>Not Eligible</p>
@@ -18,7 +21,8 @@
     </div>
     
     <%end%>
-<div class="card-body">
+ </div>
+</div>
 <%else%>
     <%@js.zip(@a) do |a, b|%>
   
@@ -54,3 +58,9 @@
      </div>
     </div>
 <%end%>
+
+
+
+   
+    
+ 
