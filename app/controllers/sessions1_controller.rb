@@ -17,7 +17,7 @@ class Sessions1Controller < ApplicationController
             @jseeker=jseeker.id
             redirect_to jseeker_path(@jseeker), notice: "logged in successfully"
         elsif jseeker && jseeker.authenticate(params[:password])
-            session[:jseeker]=jseeker.id
+            session[:jseeker_id]=jseeker.id
             @jseeker = jseeker.id
             redirect_to verifyjseeker_url(@jseeker), notice: "You are not verified"
         else

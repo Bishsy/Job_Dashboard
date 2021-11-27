@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     def verified_user!
         redirect_to verifyuser_path(@user),alert: "You must verified in to do that." if !Current.user.verified
     end
-    before_action :set_current_jseeker
+    
     def set_current_jseeker
         if session[:jseeker_id]
             @jseeker = Jseeker.find_by(id:session[:jseeker_id])
