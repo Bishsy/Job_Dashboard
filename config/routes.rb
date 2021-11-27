@@ -17,7 +17,10 @@ Rails.application.routes.draw do
   end
 
   get "status", to: "jseeker#status"
- 
+  get 'verify/:id', to: 'users#verify', as: 'verifyuser'
+  post 'verify/:id', to: 'users#verify'
+  get 'verify1/:id', to: 'jseeker#verify', as: 'verifyjseeker'
+  post 'verify1/:id', to: 'jseeker#verify'
  
 
 #resources :applied_fors

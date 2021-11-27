@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  before_action :verified_user!, only: [:create]
     def show
         @user = User.find(params[:user_id])
         #@job=@user.jobs.find_by(params[:id])

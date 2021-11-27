@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_11_26_071140) do
     t.string "password_digest"
     t.string "qdegree"
     t.text "jdes"
-    t.boolean "verified", default: false
+    t.boolean "verified", default: false, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2021_11_26_071140) do
     t.string "cname"
     t.string "cinumber"
     t.string "mobileno"
-    t.boolean "verified", default: false
+    t.boolean "verified", default: false, null: false
   end
 
   add_foreign_key "applied_fors", "jobs"
