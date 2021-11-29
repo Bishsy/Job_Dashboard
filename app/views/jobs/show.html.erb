@@ -1,0 +1,66 @@
+<div class="card mt-5" style="width: 58rem;">
+  
+  <div class="card-body">
+
+    <h5 class="card-title"><%= @job.job_title %></h5>
+    <hr>
+    <p class="card-text"> <p><%= @job.job_des %></p></p>
+
+<% if Current.jseeker%>
+    <%=form_with model: @applied_for, url: jseeker_job_applied_for_index_path(@jseeker,@job) do |form| %>
+    <div class="mb-3">
+        <%= form.hidden_field :id, value: params[:id] %>
+        <%if @job.job_percat <= @jseeker.percentage%>
+        <p><b>Eligible</b></p>
+        <%=  form.submit "Apply", class: "btn btn-primary" %>
+    <%else%>
+            <p>Not Eligible</p>
+            Required percentage should me more than <%=@job.job_percat%> but your percentage is <%=@jseeker.percentage%>
+    <%end%>
+        
+    </div>
+    
+    <%end%>
+ </div>
+</div>
+<%else%>
+    <%@js.zip(@a) do |a, b|%>
+  
+    
+    <h5 class="card-title"><%=a.name%></h5><hr>
+    <%=a.qdegree%><br>
+    <div class="mb-2">
+    <%=a.jdes%>
+    </div>
+    <% if b.status==1%>
+    <div class="badge bg-warning text-wrap" style="width: 6rem;">
+        <%="pending"%>
+    </div>
+   
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <%=link_to "Approve", edit_jseeker_job_applied_for_path(a.id,b.job_id,b.id),class: "btn btn-primary btn-sm" %>
+             <%=link_to "Reject", jseeker_job_applied_for_path(a.id,b.job_id,b.id),class: "btn btn-primary btn-sm" %><br>
+             </div>
+    <% elsif b.status==2%>
+    <div class="badge bg-success text-wrap" style="width: 6rem;">
+        <%=" already approved"%>
+    </div>
+            <br>
+    <%else%>
+    <div class="badge bg-danger text-wrap" style="width: 6rem;">
+        <%="rejected"%>
+    </div>
+            <br>
+        <%end%>
+        <br>
+    <%end%>
+     </div>
+    </div>
+<%end%>
+
+
+
+   
+    
+ 

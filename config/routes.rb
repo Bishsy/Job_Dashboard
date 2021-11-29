@@ -6,14 +6,24 @@ Rails.application.routes.draw do
   patch "password", to: "passwords#update"
   #get "sign_up", to: "registrations#new"
   #post "sign_up", to: "registrations#create"
-  resources :jseeker, only: [:index,:create,:show]
-  
-  resources :user do
-    resources :job
+  resources :jseeker do
+    resources :job, only: [:show] do
+      resources :applied_for
+    end
   end
+  
+  resources :users do
+    resources :jobs, only: [:index, :create, :new, :show, :destroy]
+  end
+
+  get "status", to: "jseeker#status"
+  get 'verify/:id', to: 'users#verify', as: 'verifyuser'
+  post 'verify/:id', to: 'users#verify'
+  get 'verify1/:id', to: 'jseeker#verify', as: 'verifyjseeker'
+  post 'verify1/:id', to: 'jseeker#verify'
  
 
-resources :applied_fors
+#resources :applied_fors
 
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"

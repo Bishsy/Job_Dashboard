@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+body{
+    width: 100vw;
+    display: block;
+    position: relative;
+    height: fit-content;
+    
+}
+body::after {
+    content: "";
+    background:linear-gradient(to right, rgba(0, 0, 0, 0), #0275d8); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }

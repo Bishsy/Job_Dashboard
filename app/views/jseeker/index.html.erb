@@ -1,6 +1,6 @@
 <h1>Sign UP For JobSeeker</h1>
 <div class="mb-3">
-<%= button_to "Sign Up as Employer", user_index_path, :id => "open-contacts-dialog-btn",
+<%= button_to "Sign Up as Employer", users_path, :id => "open-contacts-dialog-btn",
       :class => "btn btn-primary btn-sm", :method => :get %>
 </div>
  
@@ -27,21 +27,34 @@
     </div>
       
     <div class="mb-3">
+    <%= form.label :Highest_Qualified %><br>
+    <%=form.select :qdegree, ['B.Tech', 'M.tech' , 'Higher Secondary'],class: "form-control"%>
+
+    <div class="mb-3">
     <%= form.label :Percentage %>
     <%=form.text_field  :percentage, class: "form-control"%>
     </div>
+
+    </div>
+    <div class="mb-3">
+    <%= form.label :Job_seeker_Description %>
+    <%=form.text_area  :jdes, class: "form-control"%>
+    </div>
     
-   
     <div class="mb-3">
     <%= form.label :password %>
     <%=form.password_field :password, class:"form-control",placeholder:"password" %>
     </div>
     
     <div class="mb-3">
-    <%= form.label :password_confrimation %>
+    <%= form.label :password_confirmation %>
     <%=form.password_field :password_confirmation, class:"form-control",placeholder:"password"%>
     </div>
 
+    <div class="mb-3">
+        <label for="channel">Verification Method</label>
+        <label><input type="radio" name="channel" value="sms" checked>SMS</label>
+    </div>
     <div class="mb-3">
     <%=  form.submit "sign up", class: "btn btn-primary" %>
     </div>

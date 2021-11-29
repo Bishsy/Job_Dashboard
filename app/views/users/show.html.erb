@@ -1,0 +1,26 @@
+<h1 class="mb-4 mt-3">Welcome to  Employer's Dashboard</h1>
+<hr>
+ <div class="card mb-3 ml-3" style="max-width: 58rem; padding:1rem">
+<%if @job==0%>
+  <div class="card-header mt-3"><h2>You have not posted any job </h2></div>
+  <br>
+  <p>click on this to add job</p>
+  <%=link_to "Add Job", user_jobs_path(@user.id),class: "btn btn-primary mb-3"%>
+<%else%>
+    <div class="card-header">Listed Jobs : <%=@job%></div>
+    <% @user.jobs.each do |a| %>
+    <p>
+     <div class="ms-3"> 
+    <%= link_to a.job_title, [a.user , a ],class: "btn btn-outline-primary"%><br>
+     
+    
+      <%= a.job_des  %></p>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <%= link_to "Delete Job", [a.user, a],class: "btn btn-secondary btn-sm",
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+      </div>
+
+<% end %>
+<%end%>

@@ -1,21 +1,30 @@
 class Sessions1Controller < ApplicationController
 
     def new
-
+        if Jseeker.find_by(id:session[:jseeker_id])
+            redirect_to jseeker_path(@jseeker)
+        end
     end
 
     def create
+        
+        
         #jseeker=Jseeker.find_by(email: params[:email])
         jseeker=Jseeker.find_by(mobile: params[:mobile])
 
-        if jseeker.present? && jseeker.authenticate(params[:password])
+        if jseeker.present? && jseeker.authenticate(params[:password])&& jseeker.verified
             session[:jseeker_id]=jseeker.id
             @jseeker=jseeker.id
             redirect_to jseeker_path(@jseeker), notice: "logged in successfully"
+        elsif jseeker && jseeker.authenticate(params[:password])
+            session[:jseeker_id]=jseeker.id
+            @jseeker = jseeker.id
+            redirect_to verifyjseeker_url(@jseeker), notice: "You are not verified"
         else
             flash[:alert] = "Invalid email or password"
             render :new
         end
+    
     end
 
 
