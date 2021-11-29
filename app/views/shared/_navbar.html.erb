@@ -1,7 +1,6 @@
-
         
 <% if Current.jseeker%>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
                 <%=link_to "Home", jseeker_path(@jseeker), class:"navbar-brand" %>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +33,7 @@
 
 
 <%elsif Current.user%>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <%=link_to "Home", user_path(@user) , class:"navbar-brand" %>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +63,7 @@
   </div>
   </nav>
 <% else %>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
               <div class="container-fluid">
  
               <%=link_to "Home", root_path, class:"navbar-brand" %>
@@ -74,7 +73,7 @@
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                 <li class="nav-item">
-                  <%= link_to "Sign_Up", jseeker_index_path, class: "nav-link" %> 
+                  <%= link_to "Sign Up", jseeker_index_path, class: "nav-link" %> 
                 </li>
               <li class="nav-item">
                 <%= link_to "Login", sign_in1_path, class: "nav-link" %>
